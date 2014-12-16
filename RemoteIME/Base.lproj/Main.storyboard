@@ -60,11 +60,16 @@
                                     <action selector="searchnow:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dTg-lm-4BD"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="device_finding.png" id="FBj-3Z-l4b">
+                                <rect key="frame" x="90" y="118" width="140" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="OLG-fF-inE"/>
                     <connections>
+                        <outlet property="roundani" destination="FBj-3Z-l4b" id="1eD-Wv-yhA"/>
                         <outlet property="vIPtable" destination="1ZQ-c6-aHA" id="cqV-4J-i40"/>
                         <outlet property="vSearchButton" destination="c6z-k0-asI" id="YEl-8l-brA"/>
                     </connections>
@@ -343,6 +348,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="device_finding.png" width="140" height="140"/>
         <image name="device_list.png" width="180" height="40"/>
         <image name="find_device.png" width="140" height="140"/>
         <image name="home_btn_bg.png" width="96" height="70"/>

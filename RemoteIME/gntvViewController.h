@@ -20,5 +20,5 @@
 }
 @property(nonatomic,retain)NSMutableDictionary * IPs;
 @property(nonatomic,retain)AsyncUdpSocket * vCommSoc;
-
+@property(nonatomic,retain)NSInvocationOperation * invo_Search;
 @end

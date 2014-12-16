@@ -12,12 +12,13 @@
 
 @interface gntvViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *test;
+@property (weak, nonatomic) IBOutlet UIImageView *roundani;
 @property (weak, nonatomic) IBOutlet UITableView *vIPtable;
 @property (weak, nonatomic) IBOutlet UIButton *vSearchButton;
 @end
 
 @implementation gntvViewController
-@synthesize vCommSoc,vSearchButton,vIPtable,test;
+@synthesize vCommSoc,vSearchButton,vIPtable,test,roundani,invo_Search;
 @synthesize IPs;
 
 
@@ -34,20 +35,43 @@
     
     IPs=[[NSMutableDictionary alloc] init];
 
+    [self.roundani setHidden:YES];
     
     
     //[self IsWifiNetworkAvialable];
 	// Do any additional setup after loading the view, typically from a nib.
 }
-- (void)didReceiveMemoryWarning
+-(void)searchDevice:(id)obj
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-//- (IBAction)send:(id)sender {
-//}
-- (IBAction)searchnow:(id)sender {
     BOOL wifi_status=[self IsWifiNetworkAvialable];
+    
+    /*
+     CABasicAnimation *ani=[CABasicAnimation animationWithKeyPath:@"rolling"];
+     ani.toValue = [NSNumber numberWithFloat: M_PI*2.0];
+     ani.duration = 5;
+     ani.cumulative = YES;
+     ani.repeatCount = HUGE_VALF;
+     [self.rollingAni.layer addAnimation:ani forKey:@"rolling"];
+     
+     CATransform3D rotationTransform = CATransform3DMakeRotation(1.0f * M_PI, 0, 0, 1.0);
+     
+     CABasicAnimation* rotationAnimation;
+     rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform"];
+     
+     rotationAnimation.toValue = [NSValue valueWithCATransform3D:rotationTransform];
+     rotationAnimation.duration = 0.25f;
+     rotationAnimation.cumulative = YES;
+     rotationAnimation.repeatCount = 10;
+     
+     [self.rollingAni.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
+     */
+    
+    
+    
+    
+    
+    
+    
     if(!wifi_status) {
         [self.vSearchButton setUserInteractionEnabled:YES];
         NSString *ip=[self localWiFiIPAddress];
@@ -62,12 +86,57 @@
         [self.vSearchButton setUserInteractionEnabled:NO];
         NSLog(@"Wifi is not available!");
     }
+}
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+//- (IBAction)send:(id)sender {
+//}
+- (IBAction)searchnow:(id)sender {
+    
+    
+    CATransform3D rotationTransform = CATransform3DMakeRotation(0.5f * M_PI, 0, 0, 1.0);
+    CABasicAnimation* rotationAnimation;
+    rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform"];
+    rotationAnimation.toValue = [NSValue valueWithCATransform3D:rotationTransform];
+    rotationAnimation.duration = 5.0f;
+    rotationAnimation.cumulative = YES;
+    rotationAnimation.repeatCount = HUGE_VAL;
+    [self.roundani.layer addAnimation:rotationAnimation forKey:@"rotationAnimationa"];
+    [self.roundani setHidden:NO];
+    ///Users/apple28/Desktop/github/RemoteIME/RemoteIME/gntvViewController.m:108:27: Incompatible pointer types initializing 'dispatch_queue_attr_t' (aka 'NSObject<OS_dispatch_queue_attr> *') with an expression of type 'dispatch_queue_t' (aka 'NSObject<OS_dispatch_queue> *')
+    //dispatch_queue_t cq=dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0);
+    //dispatch_async(cq, ^{
+            BOOL wifi_status=[self IsWifiNetworkAvialable];
+            if(!wifi_status) {
+                [self.vSearchButton setUserInteractionEnabled:YES];
+                NSString *ip=[self localWiFiIPAddress];
+                if(ip !=nil ){
+                    NSArray *sections = [ip componentsSeparatedByString:@"."];
+                    NSString *ipwith3parts = [[NSString alloc] initWithFormat:@"%@.%@.%@.",[sections objectAtIndex:0],[sections objectAtIndex:1],[sections objectAtIndex:2] ];
+                    int ip4th = [[sections objectAtIndex:3] intValue];
+                    [self sendscan:ipwith3parts myipadd4th:ip4th];
+                }
+                
+            }else{
+                [self.vSearchButton setUserInteractionEnabled:NO];
+                NSLog(@"Wifi is not available!");
+            }
+        //});
+    
+    //invo_Search = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(searchDevice:) object:nil];
+    
+    //[invo_Search start];
+    
     
 }
 
 - (void)onUdpSocket:(AsyncUdpSocket *)sock didSendDataWithTag:(long)tag
 {
 	NSLog(@"haha");
+    
 }
 
 - (void)onUdpSocket:(AsyncUdpSocket *)sock didNotSendDataWithTag:(long)tag dueToError:(NSError *)error
@@ -94,6 +163,9 @@
     
     [self.vIPtable reloadData];
     [self.vCommSoc receiveWithTimeout:-1 tag:0];
+    
+    [self.roundani.layer removeAnimationForKey:@"rotationAnimationa"];
+    [self.roundani setHidden:YES];
 	return YES;
 }
 - (BOOL)IsWifiNetworkAvialable
@@ -148,7 +220,7 @@
             NSString * ip = [ip3parts stringByAppendingFormat:@"%d",i];
             
             [self.vCommSoc sendData:packet toHost:ip port:6000 withTimeout:80 tag:0];
-            [NSThread sleepForTimeInterval:0.01];
+            //[NSThread sleepForTimeInterval:0.01];
         }
     }
 }
