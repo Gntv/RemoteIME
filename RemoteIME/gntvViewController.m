@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *test;
 @property (weak, nonatomic) IBOutlet UIImageView *roundani;
 @property (weak, nonatomic) IBOutlet UITableView *vIPtable;
+@property (weak, nonatomic) IBOutlet UITextField *searchInd;
 @property (weak, nonatomic) IBOutlet UIButton *vSearchButton;
 @end
 
@@ -94,6 +95,12 @@
 }
 //- (IBAction)send:(id)sender {
 //}
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
+    if([IPs count] ==0){
+        [self.searchInd setText:@"Searching No STB."];
+    }
+}
 - (IBAction)searchnow:(id)sender {
     
     
@@ -103,7 +110,8 @@
     rotationAnimation.toValue = [NSValue valueWithCATransform3D:rotationTransform];
     rotationAnimation.duration = 5.0f;
     rotationAnimation.cumulative = YES;
-    rotationAnimation.repeatCount = HUGE_VAL;
+    rotationAnimation.repeatCount = 10;
+    [rotationAnimation setDelegate:self];
     [self.roundani.layer addAnimation:rotationAnimation forKey:@"rotationAnimationa"];
     [self.roundani setHidden:NO];
     ///Users/apple28/Desktop/github/RemoteIME/RemoteIME/gntvViewController.m:108:27: Incompatible pointer types initializing 'dispatch_queue_attr_t' (aka 'NSObject<OS_dispatch_queue_attr> *') with an expression of type 'dispatch_queue_t' (aka 'NSObject<OS_dispatch_queue> *')
@@ -117,6 +125,7 @@
                     NSArray *sections = [ip componentsSeparatedByString:@"."];
                     NSString *ipwith3parts = [[NSString alloc] initWithFormat:@"%@.%@.%@.",[sections objectAtIndex:0],[sections objectAtIndex:1],[sections objectAtIndex:2] ];
                     int ip4th = [[sections objectAtIndex:3] intValue];
+                    [self.searchInd setText:@"Searching STB..."];
                     [self sendscan:ipwith3parts myipadd4th:ip4th];
                 }
                 
@@ -166,6 +175,7 @@
     
     [self.roundani.layer removeAnimationForKey:@"rotationAnimationa"];
     [self.roundani setHidden:YES];
+    [self.searchInd setText:@"Select STB in the list."];
 	return YES;
 }
 - (BOOL)IsWifiNetworkAvialable

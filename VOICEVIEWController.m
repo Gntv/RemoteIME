@@ -176,9 +176,9 @@
 {
     //int i;
     Byte content[3];
-    content[0]=4; // data sum
-    content[1]=3+str.length; // type
-    content[2]=255; // opertation
+    content[0]=3+str.length; // data sum
+    content[1]=4; // type
+    content[2]=2; // opertation
     
     //NSData * packet = [[NSData alloc] initWithBytes:content length:4];
     
