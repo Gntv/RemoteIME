@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *test;
 @property (weak, nonatomic) IBOutlet UIImageView *roundani;
 @property (weak, nonatomic) IBOutlet UITableView *vIPtable;
-@property (weak, nonatomic) IBOutlet UITextField *searchInd;
 @property (weak, nonatomic) IBOutlet UIButton *vSearchButton;
 @end
 
@@ -98,7 +97,7 @@
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
     if([IPs count] ==0){
-        [self.searchInd setText:@"Searching No STB."];
+        [self.searchIND setText:@"Searching No STB."];
     }
 }
 - (IBAction)searchnow:(id)sender {
@@ -125,7 +124,7 @@
                     NSArray *sections = [ip componentsSeparatedByString:@"."];
                     NSString *ipwith3parts = [[NSString alloc] initWithFormat:@"%@.%@.%@.",[sections objectAtIndex:0],[sections objectAtIndex:1],[sections objectAtIndex:2] ];
                     int ip4th = [[sections objectAtIndex:3] intValue];
-                    [self.searchInd setText:@"Searching STB..."];
+                    [self.searchIND setText:@"Searching STB..."];
                     [self sendscan:ipwith3parts myipadd4th:ip4th];
                 }
                 
@@ -175,7 +174,7 @@
     
     [self.roundani.layer removeAnimationForKey:@"rotationAnimationa"];
     [self.roundani setHidden:YES];
-    [self.searchInd setText:@"Select STB in the list."];
+    [self.searchIND setText:@"Select STB in the list."];
 	return YES;
 }
 - (BOOL)IsWifiNetworkAvialable

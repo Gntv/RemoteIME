@@ -87,6 +87,7 @@
 		61F4548C1A1F9713001C7914 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F4548B1A1F9713001C7914 /* AddressBook.framework */; };
 		61F4548E1A1F973F001C7914 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F4548D1A1F973F001C7914 /* QuartzCore.framework */; };
 		61FF76221A13422D0033845A /* gntvTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FF76211A13422D0033845A /* gntvTabBarController.m */; };
+		671F63341A49573B00536586 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671F63321A49573B00536586 /* Main.storyboard */; };
 		67E20BE61A43F73100F3C35D /* key_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 67E20BDA1A43F73000F3C35D /* key_0.png */; };
 		67E20BE71A43F73100F3C35D /* key_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67E20BDB1A43F73000F3C35D /* key_1.png */; };
 		67E20BE81A43F73100F3C35D /* key_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 67E20BDC1A43F73000F3C35D /* key_2.png */; };
@@ -100,7 +101,6 @@
 		67E20BF01A43F73100F3C35D /* volume_add.png in Resources */ = {isa = PBXBuildFile; fileRef = 67E20BE41A43F73100F3C35D /* volume_add.png */; };
 		67E20BF11A43F73100F3C35D /* volume_sub.png in Resources */ = {isa = PBXBuildFile; fileRef = 67E20BE51A43F73100F3C35D /* volume_sub.png */; };
 		67F89EFA1A1F0EEF006D370A /* VOICEVIEWController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F89EF91A1F0EEF006D370A /* VOICEVIEWController.m */; };
-		67FF0D0A1A481B3900BE54CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67FF0D091A481B3900BE54CD /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,6 +204,7 @@
 		61F4548D1A1F973F001C7914 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		61FF76201A13422D0033845A /* gntvTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gntvTabBarController.h; sourceTree = "<group>"; };
 		61FF76211A13422D0033845A /* gntvTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gntvTabBarController.m; sourceTree = "<group>"; };
+		671F63331A49573B00536586 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		67DC59C31A14500F00F270AC /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		67E20BDA1A43F73000F3C35D /* key_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key_0.png; sourceTree = "<group>"; };
 		67E20BDB1A43F73000F3C35D /* key_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key_1.png; sourceTree = "<group>"; };
@@ -219,7 +220,6 @@
 		67E20BE51A43F73100F3C35D /* volume_sub.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volume_sub.png; sourceTree = "<group>"; };
 		67F89EF81A1F0EEF006D370A /* VOICEVIEWController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VOICEVIEWController.h; path = ../VOICEVIEWController.h; sourceTree = "<group>"; };
 		67F89EF91A1F0EEF006D370A /* VOICEVIEWController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VOICEVIEWController.m; path = ../VOICEVIEWController.m; sourceTree = "<group>"; };
-		67FF0D091A481B3900BE54CD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,7 +299,6 @@
 		61AA12B61A105ABB0041AB7E /* RemoteIME */ = {
 			isa = PBXGroup;
 			children = (
-				67FF0D091A481B3900BE54CD /* Main.storyboard */,
 				67DC59C41A14565200F270AC /* iPad */,
 				67DC59C31A14500F00F270AC /* Reachability.h */,
 				61F1A3651A1210A300E52530 /* IMETabBarController.h */,
@@ -311,6 +310,7 @@
 				61AA134C1A10840B0041AB7E /* AsyncSocket.h */,
 				61AA12BF1A105ABB0041AB7E /* gntvAppDelegate.h */,
 				61AA12C01A105ABB0041AB7E /* gntvAppDelegate.m */,
+				671F63321A49573B00536586 /* Main.storyboard */,
 				67F89EF81A1F0EEF006D370A /* VOICEVIEWController.h */,
 				67F89EF91A1F0EEF006D370A /* VOICEVIEWController.m */,
 				61F1A3621A11E62F00E52530 /* IMEViewController.h */,
@@ -536,7 +536,7 @@
 				61AA132B1A105F340041AB7E /* maintab_toolbar_bg.png in Resources */,
 				61AA133C1A105F340041AB7E /* remote_right_selected.png in Resources */,
 				61AA13471A105F340041AB7E /* voice_search_download.png in Resources */,
-				67FF0D0A1A481B3900BE54CD /* Main.storyboard in Resources */,
+				671F63341A49573B00536586 /* Main.storyboard in Resources */,
 				61AA13441A105F340041AB7E /* search_bg.jpg in Resources */,
 				61AA13351A105F340041AB7E /* remote_left_unselected.png in Resources */,
 				67E20BEF1A43F73100F3C35D /* key_9.png in Resources */,
@@ -639,6 +639,14 @@
 				61AA12D91A105ABC0041AB7E /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		671F63321A49573B00536586 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				671F63331A49573B00536586 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

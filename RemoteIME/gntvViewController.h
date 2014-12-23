@@ -18,6 +18,7 @@
 @interface gntvViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>{
 //AsyncUdpSocket *vCommSoc;
 }
+@property (weak, nonatomic) IBOutlet UILabel *searchIND;
 @property(nonatomic,retain)NSMutableDictionary * IPs;
 @property(nonatomic,retain)AsyncUdpSocket * vCommSoc;
 @property(nonatomic,retain)NSInvocationOperation * invo_Search;
