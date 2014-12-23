@@ -132,11 +132,6 @@
                                     <action selector="search:" destination="DxX-1s-NER" eventType="touchUpInside" id="aYs-uH-NCE"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yKT-Xv-D8I">
-                                <rect key="frame" x="20" y="19" width="199" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4X-MZ-sWJ">
                                 <rect key="frame" x="76" y="107" width="168" height="160"/>
                                 <state key="normal" image="voice_search_microphone.png">
@@ -165,6 +160,11 @@
                                     <outlet property="delegate" destination="DxX-1s-NER" id="UvW-Nh-Iv3"/>
                                 </connections>
                             </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yKT-Xv-D8I">
+                                <rect key="frame" x="16" y="19" width="199" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -552,7 +552,23 @@
                     <view key="view" contentMode="scaleToFill" id="9SS-LS-PDv">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version: V1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keG-3V-dkm">
+                                <rect key="frame" x="0.0" y="225" width="320" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TzJ-md-mab"/>
+                                    <constraint firstAttribute="width" constant="320" id="y6i-cp-zKx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="keG-3V-dkm" secondAttribute="centerY" id="BpM-3v-lmr"/>
+                            <constraint firstAttribute="centerX" secondItem="keG-3V-dkm" secondAttribute="centerX" id="iDf-hX-0r1"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="setting" image="icon_help.png" id="Si6-ba-sY2"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
