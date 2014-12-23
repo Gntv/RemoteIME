@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *Kdown;
 @property (weak, nonatomic) IBOutlet UIButton *Kok;
 @property (weak, nonatomic) IBOutlet UIButton *Kvolumdown;
-@property (weak, nonatomic) IBOutlet UIButton *Kmute;
+//@property (weak, nonatomic) IBOutlet UIButton *Kmute;
 @property (weak, nonatomic) IBOutlet UIButton *Kvolumup;
 
 @end
@@ -153,11 +153,42 @@
     
     
 }
+/*
 - (IBAction)pressMute:(id)sender {
     
     [self presskey:91];
     
     
+}*/
+- (IBAction)pressK1:(id)sender {
+    [self presskey:8];
+}
+- (IBAction)pressK2:(id)sender {
+    [self presskey:9];
+}
+- (IBAction)pressK3:(id)sender {
+    [self presskey:10];
+}
+- (IBAction)pressK4:(id)sender {
+    [self presskey:11];
+}
+- (IBAction)pressK5:(id)sender {
+    [self presskey:12];
+}
+- (IBAction)pressK6:(id)sender {
+    [self presskey:13];
+}
+- (IBAction)pressK7:(id)sender {
+    [self presskey:14];
+}
+- (IBAction)pressK8:(id)sender {
+    [self presskey:15];
+}
+- (IBAction)pressK9:(id)sender {
+    [self presskey:16];
+}
+- (IBAction)pressK0:(id)sender {
+    [self presskey:7];
 }
 
 
