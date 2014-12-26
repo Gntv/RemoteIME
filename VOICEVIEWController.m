@@ -53,6 +53,10 @@
     
     
     self.texts=[[NSMutableDictionary alloc] init];
+    
+    vCommSoc = [[AsyncUdpSocket alloc] initWithDelegate:self];
+    [vCommSoc bindToPort:6000 error:nil];
+    [vCommSoc receiveWithTimeout:-1 tag:0];
 
 }
 
@@ -181,16 +185,20 @@
     content[2]=2; // opertation
     
     //NSData * packet = [[NSData alloc] initWithBytes:content length:4];
+    NSMutableData *pack = [[NSMutableData alloc] initWithBytes:content length:sizeof(content)];
+    NSData *data =[str dataUsingEncoding:NSUTF8StringEncoding];
     
-    NSData *contentdata = [[str dataUsingEncoding:NSUTF8StringEncoding] bytes];
+    [pack appendData:data];
+    
+   // NSData *contentdata = [data bytes];
     
     
     
     
-    NSMutableData *temp = [[NSMutableData alloc] initWithBytes:content length:3];
-    [temp appendData:contentdata];
+    //NSMutableData *temp = [[NSMutableData alloc] initWithBytes:content length:3];
+    //[temp appendData:contentdata];
     
-    [self.vCommSoc sendData:temp toHost:boxip port:6000 withTimeout:80 tag:0];
+    [self.vCommSoc sendData:pack toHost:boxip port:6000 withTimeout:80 tag:0];
     
 }
 
