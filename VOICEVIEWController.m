@@ -19,7 +19,7 @@
 
 
 
-@property(nonatomic,retain)NSMutableDictionary * texts;
+//@property(nonatomic,retain)NSMutableDictionary * texts;
 @property (nonatomic,retain) AsyncUdpSocket *vCommSoc;
 
 @end
@@ -39,6 +39,7 @@
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
     NSString *initstring = [[NSString alloc] initWithFormat:@"appid=%@",@"546ecb9c"];
     [IFlySpeechUtility createUtility:initstring];
@@ -52,14 +53,14 @@
     [speech setParameter:@"asrview.pcm " forKey: [IFlySpeechConstant ASR_AUDIO_PATH]];
     
     
-    self.texts=[[NSMutableDictionary alloc] init];
+    //self.texts=[[NSMutableDictionary alloc] init];
     
     vCommSoc = [[AsyncUdpSocket alloc] initWithDelegate:self];
     [vCommSoc bindToPort:6000 error:nil];
     [vCommSoc receiveWithTimeout:-1 tag:0];
 
+    
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -75,7 +76,7 @@
 - (void)viewWillDisappear:(BOOL)animated{
 }
 - (IBAction)speekPressed:(id)sender {
-    [self.texts removeAllObjects];
+    //[self.texts removeAllObjects];
     [speech startListening];
     
 }
@@ -113,8 +114,9 @@
         
     }
     NSLog(@"最终的识别结果:%@",str);
-    [self.texts setObject:str forKey:str];
-    [self.voiceText reloadData];
+    //[self.texts setObject:str forKey:str];
+    //[self reloadData];
+    self.searchText.text = str;
     //去掉识别结果最后的标点符号
     //if ([str isEqualToString:@"。"] || [str isEqualToString:@"？"] || [str isEqualToString:@"！"]) {
     //    NSLog(@"末尾标点符号：%@",str);
@@ -138,7 +140,7 @@
 
 
 
-
+/*
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.texts count];
@@ -173,21 +175,23 @@
     //gntvAppDelegate * del= [[UIApplication sharedApplication] delegate];
     //del.ip =[[IPs allKeys] objectAtIndex:indexPath.row];
     
-}
+}*/
 
 -(void)sendText:(NSString *)boxip
         str:(NSString *)str
 {
     //int i;
     Byte content[3];
-    content[0]=3+str.length; // data sum
-    content[1]=4; // type
-    content[2]=2; // opertation
+    
+    
     
     //NSData * packet = [[NSData alloc] initWithBytes:content length:4];
-    NSMutableData *pack = [[NSMutableData alloc] initWithBytes:content length:sizeof(content)];
-    NSData *data =[str dataUsingEncoding:NSUTF8StringEncoding];
     
+    NSData *data =[str dataUsingEncoding:NSUTF8StringEncoding];
+    content[1]=4; // type
+    content[2]=2; // opertation
+    content[0]=3+data.length; // data sum
+    NSMutableData *pack = [[NSMutableData alloc] initWithBytes:content length:sizeof(content)];
     [pack appendData:data];
     
    // NSData *contentdata = [data bytes];

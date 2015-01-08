@@ -14,6 +14,6 @@
 #import <iflyMSC/IFlySpeechConstant.h>
 #import "AsyncUdpSocket.h"
 #import "gntvAppDelegate.h"
-@interface VOICEVIEWController : UIViewController<IFlySpeechRecognizerDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface VOICEVIEWController : UIViewController<IFlySpeechRecognizerDelegate>
 
 @end

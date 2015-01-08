@@ -14,6 +14,36 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    //[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"])
+    {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
+        NSLog(@"第一次启动");
+        SplashViewController *splash = [[SplashViewController alloc] init];
+        self.window.rootViewController = splash;
+        //[[UIApplication sharedApplication] keyWindow].rootViewController=splash;
+    }else{
+        NSLog(@"不是第一次启动");
+        //gntvViewController *mainview = [[gntvViewController alloc] init];
+        //gntvViewController *mainview = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"qwer"];
+        UINavigationController *mainview = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"start"];
+        self.window.rootViewController = mainview;
+        //[[UIApplication sharedApplication] keyWindow].rootViewController=mainview;
+    }
+    //self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    
+    
+    return YES;
+    
+    
+    
+    
+    
     return YES;
 }
 							

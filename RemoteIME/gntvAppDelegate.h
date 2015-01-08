@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SplashViewController.h"
+#import "gntvAppDelegate.h"
 
 @interface gntvAppDelegate : UIResponder <UIApplicationDelegate>{
     NSString * ip;

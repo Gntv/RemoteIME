@@ -28,7 +28,6 @@
     //NSLog(@"gagagagagagagagWifi is not available!");
     [super viewDidLoad];
     
-    
     self.vCommSoc = [[AsyncUdpSocket alloc] initWithDelegate:self];
     [self.vCommSoc bindToPort:6000 error:nil];
     [self.vCommSoc receiveWithTimeout:-1 tag:0];
@@ -38,9 +37,31 @@
     [self.roundani setHidden:YES];
 
     [self doSearchOnce];
+    
+    //if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+        
+        //self.edgesForExtendedLayout = UIRectEdgeNone;
+        //[self.navigationController.navigationBar setTranslucent:NO];
+   //}
+    
     //[self IsWifiNetworkAvialable];
 	// Do any additional setup after loading the view, typically from a nib.
-}/*
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES];
+
+}
+-(void)viewDidDisappear:(BOOL)animated
+{
+
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:NO];
+
+}
+/*
 -(void)searchOnce
 {
     BOOL wifi_status=[self IsWifiNetworkAvialable];
@@ -100,7 +121,7 @@
     CABasicAnimation* rotationAnimation;
     rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform"];
     rotationAnimation.toValue = [NSValue valueWithCATransform3D:rotationTransform];
-    rotationAnimation.duration = 5.0f;
+    rotationAnimation.duration = 0.5f;
     rotationAnimation.cumulative = YES;
     rotationAnimation.repeatCount = 10;
     [rotationAnimation setDelegate:self];

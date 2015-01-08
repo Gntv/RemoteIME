@@ -88,6 +88,15 @@
 		61F4548E1A1F973F001C7914 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F4548D1A1F973F001C7914 /* QuartzCore.framework */; };
 		61FF76221A13422D0033845A /* gntvTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FF76211A13422D0033845A /* gntvTabBarController.m */; };
 		671F63341A49573B00536586 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671F63321A49573B00536586 /* Main.storyboard */; };
+		672F5C6A1A5C15D700F64E92 /* about_icon  r.png in Resources */ = {isa = PBXBuildFile; fileRef = 672F5C641A5C15D700F64E92 /* about_icon  r.png */; };
+		672F5C6B1A5C15D700F64E92 /* guide_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 672F5C651A5C15D700F64E92 /* guide_01.jpg */; };
+		672F5C6C1A5C15D700F64E92 /* guide_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 672F5C661A5C15D700F64E92 /* guide_02.jpg */; };
+		672F5C6D1A5C15D700F64E92 /* guide_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 672F5C671A5C15D700F64E92 /* guide_03.jpg */; };
+		672F5C6E1A5C15D700F64E92 /* guide_04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 672F5C681A5C15D700F64E92 /* guide_04.jpg */; };
+		672F5C6F1A5C15D700F64E92 /* guide_05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 672F5C691A5C15D700F64E92 /* guide_05.jpg */; };
+		672F5C731A5C163B00F64E92 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672F5C711A5C163B00F64E92 /* SplashViewController.m */; };
+		672F5C741A5C163B00F64E92 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 672F5C721A5C163B00F64E92 /* SplashViewController.xib */; };
+		676418291A5EC34400AB91A3 /* settingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 676418281A5EC34400AB91A3 /* settingViewController.m */; };
 		67E20BE61A43F73100F3C35D /* key_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 67E20BDA1A43F73000F3C35D /* key_0.png */; };
 		67E20BE71A43F73100F3C35D /* key_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67E20BDB1A43F73000F3C35D /* key_1.png */; };
 		67E20BE81A43F73100F3C35D /* key_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 67E20BDC1A43F73000F3C35D /* key_2.png */; };
@@ -205,6 +214,17 @@
 		61FF76201A13422D0033845A /* gntvTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gntvTabBarController.h; sourceTree = "<group>"; };
 		61FF76211A13422D0033845A /* gntvTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gntvTabBarController.m; sourceTree = "<group>"; };
 		671F63331A49573B00536586 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		672F5C641A5C15D700F64E92 /* about_icon  r.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_icon  r.png"; sourceTree = "<group>"; };
+		672F5C651A5C15D700F64E92 /* guide_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide_01.jpg; sourceTree = "<group>"; };
+		672F5C661A5C15D700F64E92 /* guide_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide_02.jpg; sourceTree = "<group>"; };
+		672F5C671A5C15D700F64E92 /* guide_03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide_03.jpg; sourceTree = "<group>"; };
+		672F5C681A5C15D700F64E92 /* guide_04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide_04.jpg; sourceTree = "<group>"; };
+		672F5C691A5C15D700F64E92 /* guide_05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide_05.jpg; sourceTree = "<group>"; };
+		672F5C701A5C163B00F64E92 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		672F5C711A5C163B00F64E92 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		672F5C721A5C163B00F64E92 /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		676418271A5EC34400AB91A3 /* settingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingViewController.h; sourceTree = "<group>"; };
+		676418281A5EC34400AB91A3 /* settingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingViewController.m; sourceTree = "<group>"; };
 		67DC59C31A14500F00F270AC /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		67E20BDA1A43F73000F3C35D /* key_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key_0.png; sourceTree = "<group>"; };
 		67E20BDB1A43F73000F3C35D /* key_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key_1.png; sourceTree = "<group>"; };
@@ -311,6 +331,8 @@
 				61AA12BF1A105ABB0041AB7E /* gntvAppDelegate.h */,
 				61AA12C01A105ABB0041AB7E /* gntvAppDelegate.m */,
 				671F63321A49573B00536586 /* Main.storyboard */,
+				676418271A5EC34400AB91A3 /* settingViewController.h */,
+				676418281A5EC34400AB91A3 /* settingViewController.m */,
 				67F89EF81A1F0EEF006D370A /* VOICEVIEWController.h */,
 				67F89EF91A1F0EEF006D370A /* VOICEVIEWController.m */,
 				61F1A3621A11E62F00E52530 /* IMEViewController.h */,
@@ -321,6 +343,9 @@
 				61AA12B71A105ABB0041AB7E /* Supporting Files */,
 				61FF76201A13422D0033845A /* gntvTabBarController.h */,
 				61FF76211A13422D0033845A /* gntvTabBarController.m */,
+				672F5C701A5C163B00F64E92 /* SplashViewController.h */,
+				672F5C711A5C163B00F64E92 /* SplashViewController.m */,
+				672F5C721A5C163B00F64E92 /* SplashViewController.xib */,
 			);
 			path = RemoteIME;
 			sourceTree = "<group>";
@@ -358,6 +383,12 @@
 		61AA12E51A105F330041AB7E /* drawable */ = {
 			isa = PBXGroup;
 			children = (
+				672F5C641A5C15D700F64E92 /* about_icon  r.png */,
+				672F5C651A5C15D700F64E92 /* guide_01.jpg */,
+				672F5C661A5C15D700F64E92 /* guide_02.jpg */,
+				672F5C671A5C15D700F64E92 /* guide_03.jpg */,
+				672F5C681A5C15D700F64E92 /* guide_04.jpg */,
+				672F5C691A5C15D700F64E92 /* guide_05.jpg */,
 				67E20BDA1A43F73000F3C35D /* key_0.png */,
 				67E20BDB1A43F73000F3C35D /* key_1.png */,
 				67E20BDC1A43F73000F3C35D /* key_2.png */,
@@ -480,6 +511,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = none;
 				TargetAttributes = {
+					61AA12AC1A105ABA0041AB7E = {
+						DevelopmentTeam = 649XG642E4;
+					};
 					61AA12CD1A105ABC0041AB7E = {
 						TestTargetID = 61AA12AC1A105ABA0041AB7E;
 					};
@@ -519,11 +553,14 @@
 				61AA13281A105F340041AB7E /* kanke_control_bg.jpg in Resources */,
 				67E20BE81A43F73100F3C35D /* key_2.png in Resources */,
 				61AA13381A105F340041AB7E /* remote_mute_selected.png in Resources */,
+				672F5C6E1A5C15D700F64E92 /* guide_04.jpg in Resources */,
 				61AA12C91A105ABB0041AB7E /* Images.xcassets in Resources */,
 				67E20BEA1A43F73100F3C35D /* key_4.png in Resources */,
+				672F5C6F1A5C15D700F64E92 /* guide_05.jpg in Resources */,
 				61AA131C1A105F330041AB7E /* home_btn_bg.png in Resources */,
 				61AA13411A105F340041AB7E /* remote_volume_down_unselected.png in Resources */,
 				61AA13201A105F340041AB7E /* icon_help.png in Resources */,
+				672F5C6A1A5C15D700F64E92 /* about_icon  r.png in Resources */,
 				61AA133F1A105F340041AB7E /* remote_up_unselected.png in Resources */,
 				61AA131A1A105F330041AB7E /* device_list.png in Resources */,
 				61AA13271A105F340041AB7E /* icon_voice_select.png in Resources */,
@@ -547,12 +584,15 @@
 				67E20BE61A43F73100F3C35D /* key_0.png in Resources */,
 				61AA13371A105F340041AB7E /* remote_menu_unselected.png in Resources */,
 				61AA132A1A105F340041AB7E /* local_player2.png in Resources */,
+				672F5C741A5C163B00F64E92 /* SplashViewController.xib in Resources */,
 				61AA131B1A105F330041AB7E /* find_device.png in Resources */,
 				61AA13231A105F340041AB7E /* icon_remote_select.png in Resources */,
 				61AA13451A105F340041AB7E /* setting_list_arrow.png in Resources */,
 				61AA133B1A105F340041AB7E /* remote_ok_unselected.png in Resources */,
 				67E20BF11A43F73100F3C35D /* volume_sub.png in Resources */,
 				61AA13261A105F340041AB7E /* icon_voice_search_select.png in Resources */,
+				672F5C6B1A5C15D700F64E92 /* guide_01.jpg in Resources */,
+				672F5C6C1A5C15D700F64E92 /* guide_02.jpg in Resources */,
 				61AA133D1A105F340041AB7E /* remote_right_unselected.png in Resources */,
 				67E20BED1A43F73100F3C35D /* key_7.png in Resources */,
 				61AA13421A105F340041AB7E /* remote_volume_up_selected.png in Resources */,
@@ -569,6 +609,7 @@
 				61AA133E1A105F340041AB7E /* remote_up_selected.png in Resources */,
 				61AA13191A105F330041AB7E /* device_finding.png in Resources */,
 				61AA13361A105F340041AB7E /* remote_menu_selected.png in Resources */,
+				672F5C6D1A5C15D700F64E92 /* guide_03.jpg in Resources */,
 				61AA131D1A105F340041AB7E /* ic_launcher.png in Resources */,
 				61AA134A1A105F340041AB7E /* voice_search_no_microphone.png in Resources */,
 				61AA13321A105F340041AB7E /* remote_home_selected.png in Resources */,
@@ -599,6 +640,8 @@
 				61FF76221A13422D0033845A /* gntvTabBarController.m in Sources */,
 				61F1A3671A1210A300E52530 /* IMETabBarController.m in Sources */,
 				61AA12C11A105ABB0041AB7E /* gntvAppDelegate.m in Sources */,
+				672F5C731A5C163B00F64E92 /* SplashViewController.m in Sources */,
+				676418291A5EC34400AB91A3 /* settingViewController.m in Sources */,
 				61AA12C71A105ABB0041AB7E /* gntvViewController.m in Sources */,
 				67F89EFA1A1F0EEF006D370A /* VOICEVIEWController.m in Sources */,
 				61AA13581A10B54F0041AB7E /* Reachability.m in Sources */,
@@ -729,6 +772,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)",
 					"$(inherited)",
@@ -738,7 +783,8 @@
 				INFOPLIST_FILE = "RemoteIME/RemoteIME-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -748,6 +794,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)",
 					"$(inherited)",
@@ -757,7 +805,8 @@
 				INFOPLIST_FILE = "RemoteIME/RemoteIME-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
