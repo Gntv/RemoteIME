@@ -1367,25 +1367,25 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IW5-Bc-y2R">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="387"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_icon  r.png" translatesAutoresizingMaskIntoConstraints="NO" id="YNe-0J-LpT">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="about_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="YNe-0J-LpT">
                                         <rect key="frame" x="218" y="111" width="165" height="165"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="悟空遥控" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WG1-QO-yZA">
-                                        <rect key="frame" x="140" y="296" width="320" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="当前版本：1.0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAX-en-OgN">
+                                        <rect key="frame" x="140" y="316" width="320" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="320" id="fRt-kZ-JGn"/>
-                                            <constraint firstAttribute="height" constant="20" id="l4F-Oo-klO"/>
+                                            <constraint firstAttribute="width" constant="320" id="u0w-8O-khy"/>
+                                            <constraint firstAttribute="height" constant="20" id="y4g-gO-UU9"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前版本：1.0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAX-en-OgN">
-                                        <rect key="frame" x="140" y="316" width="320" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="GNTV手机遥控" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WG1-QO-yZA">
+                                        <rect key="frame" x="140" y="296" width="320" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="320" id="u0w-8O-khy"/>
-                                            <constraint firstAttribute="height" constant="20" id="y4g-gO-UU9"/>
+                                            <constraint firstAttribute="width" constant="320" id="fRt-kZ-JGn"/>
+                                            <constraint firstAttribute="height" constant="20" id="l4F-Oo-klO"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -1486,7 +1486,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="about_icon  r.png" width="165" height="165"/>
+        <image name="about_icon.png" width="180" height="180"/>
         <image name="device_finding.png" width="140" height="140"/>
         <image name="device_list.png" width="180" height="40"/>
         <image name="find_device.png" width="140" height="140"/>
