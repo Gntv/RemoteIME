@@ -139,7 +139,7 @@
     //    cell.textLabel.backgroundColor= [UIColor greenColor];
     
     //    表视图单元提供的UILabel属性，设置字体大小
-    cell.textLabel.font = [UIFont boldSystemFontOfSize:20.0f];
+    cell.textLabel.font = [UIFont systemFontOfSize:15.0f];
     //    tableView.editing=YES;
     /*
      cell.textLabel.backgroundColor = [UIColor clearColor];
@@ -192,7 +192,7 @@
     UIView *container = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 100, 40)];
     [title setText:@"系统帮助"];
-    [title setFont:[UIFont boldSystemFontOfSize:20]];
+    [title setFont:[UIFont boldSystemFontOfSize:18]];
     [title setBackgroundColor:[UIColor clearColor]];
     [title setTextColor:[UIColor blackColor]];
     [title setTextAlignment:NSTextAlignmentLeft];
