@@ -13,12 +13,81 @@
 @end
 
 @implementation settingViewController
-@synthesize buttonTable;
+//@synthesize buttonTable;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    buttonTable.delegate=self;
-    buttonTable.dataSource=self;
+    //buttonTable.delegate=self;
+    //buttonTable.dataSource=self;
+    
+    UITableView *tb = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+    tb.dataSource =self;
+    tb.delegate =self;
+    tb.backgroundColor = [UIColor clearColor];
+    tb.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:tb];
+    
+    [self.view addConstraint:[NSLayoutConstraint
+                               
+                               constraintWithItem:tb
+                               
+                               attribute:NSLayoutAttributeTop
+                               
+                               relatedBy:NSLayoutRelationEqual
+                               
+                               toItem:self.view
+                               
+                               attribute:NSLayoutAttributeTop
+                               
+                               multiplier:1
+                               
+                               constant:100]];
+    [self.view addConstraint:[NSLayoutConstraint
+                               
+                               constraintWithItem:tb
+                               
+                               attribute:NSLayoutAttributeBottom
+                               
+                               relatedBy:NSLayoutRelationEqual
+                               
+                               toItem:self.view
+                               
+                               attribute:NSLayoutAttributeBottom
+                               
+                               multiplier:1
+                               
+                               constant:0]];
+    [self.view addConstraint:[NSLayoutConstraint
+                              
+                              constraintWithItem:tb
+                              
+                              attribute:NSLayoutAttributeLeft
+                              
+                              relatedBy:NSLayoutRelationEqual
+                              
+                              toItem:self.view
+                              
+                              attribute:NSLayoutAttributeLeft
+                              
+                              multiplier:1
+                              
+                              constant:20]];
+    [self.view addConstraint:[NSLayoutConstraint
+                              
+                              constraintWithItem:tb
+                              
+                              attribute:NSLayoutAttributeRight
+                              
+                              relatedBy:NSLayoutRelationEqual
+                              
+                              toItem:self.view
+                              
+                              attribute:NSLayoutAttributeRight
+                              
+                              multiplier:1
+                              
+                              constant:-20]];
+    
     //buttonTable.style = UITableViewStyleGrouped;
     
     // Do any additional setup after loading the view.
@@ -37,7 +106,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return 3;
 }
 
 
@@ -61,8 +130,10 @@
     //    把数组中的值赋给单元格显示出来
     if(row == 0){
         cell.textLabel.text=@"关于";//[self.listData objectAtIndex:row];
-    }else{
+    }else if(row == 1){
         cell.textLabel.text=@"使用教程";
+    }else{
+        cell.textLabel.text=@"更新";
     }
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     //    cell.textLabel.backgroundColor= [UIColor greenColor];
@@ -102,10 +173,13 @@
     if(indexPath.row ==0 ){
         UIViewController *transview = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"instruct"];
         [self.navigationController pushViewController:transview animated:YES];
-    }else{
-        SplashViewController *splash = [[SplashViewController alloc] init];
+    }else if(indexPath.row == 1 ){
+        //SplashViewController *splash = [[SplashViewController alloc] init];
+        UIViewController *splash = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"splash"];
         [self presentViewController:splash animated:YES completion:nil];
 
+    }else{
+        [self checkVersion];
     }
     
 }
@@ -131,5 +205,68 @@
     
     return 40.0;
     
+}
+-(NSMutableDictionary *)dictionaryFromJsonFormatOriginalData:(NSString *)str
+{
+    SBJsonParser *sbJsonParser = [[SBJsonParser alloc]init];
+    NSError *error = nil;
+    
+    //添加autorelease 解决 内存泄漏问题
+    NSMutableDictionary *tempDictionary = [[NSMutableDictionary alloc]initWithDictionary:[sbJsonParser objectWithString:str error:&error]];
+    return tempDictionary;
+}
+-(NSDictionary *)getUpdateInfo:(NSURL *)url
+{
+    //通过url获取数据
+    NSString *jsonResponseString =   [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+    
+    //解析json数据为数据字典
+    NSDictionary *Response = [self dictionaryFromJsonFormatOriginalData:jsonResponseString];
+    
+    return Response;
+
+}
+-(void)checkVersion
+{
+    NSString *newVersion;
+    getUrls = [self getUpdateInfo:[NSURL URLWithString:@"http://123.150.174.234/update/iosupdate.json"]];
+    
+    
+    NSURL *url = [NSURL URLWithString:[getUrls valueForKey:@"appurl"]];
+    
+    //通过url获取数据
+    NSString *jsonResponseString =   [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+    NSLog(@"通过appStore获取的数据是：%@",jsonResponseString);
+    
+    //解析json数据为数据字典
+    NSDictionary *loginAuthenticationResponse = [self dictionaryFromJsonFormatOriginalData:jsonResponseString];
+    
+    //从数据字典中检出版本号数据
+    NSArray *configData = [loginAuthenticationResponse valueForKey:@"results"];
+    for(id config in configData)
+    {
+        newVersion = [config valueForKey:@"version"];
+    }
+    
+    NSLog(@"通过appStore获取的版本号是：%@",newVersion);
+    
+    //获取本地软件的版本号
+    NSString *localVersion = [[[NSBundle mainBundle]infoDictionary] objectForKey:@"CFBundleVersion"];
+    
+    NSString *msg = [NSString stringWithFormat:@"你当前的版本是V%@，发现新版本V%@，是否下载新版本？",localVersion,newVersion];
+    
+    //对比发现的新版本和本地的版本
+    if ([newVersion floatValue] > [localVersion floatValue])
+    {
+        UIAlertView *createUserResponseAlert = [[UIAlertView alloc] initWithTitle:@"升级提示!" message:msg delegate:self cancelButtonTitle:@"下次再说" otherButtonTitles: @"现在升级", nil];
+        [createUserResponseAlert show];
+    }
+}
+- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    //如果选择“现在升级”
+    if (buttonIndex == 1)
+    {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[getUrls valueForKey:@"downloadurl"]]];
+    }
 }
 @end

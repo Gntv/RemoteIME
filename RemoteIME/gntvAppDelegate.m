@@ -15,15 +15,22 @@
 {
     // Override point for customization after application launch.
     
-    //[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"])
     {
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
         NSLog(@"第一次启动");
-        SplashViewController *splash = [[SplashViewController alloc] init];
-        self.window.rootViewController = splash;
+        //SplashViewController *splash = [[SplashViewController alloc] init];
+        //self.window.rootViewController = splash;
+        
+        
+        
+        UIViewController *mainview = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"splash"];
+        self.window.rootViewController = mainview;
+        
+        
         //[[UIApplication sharedApplication] keyWindow].rootViewController=splash;
     }else{
         NSLog(@"不是第一次启动");

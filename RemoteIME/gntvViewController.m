@@ -36,6 +36,7 @@
 
     [self.roundani setHidden:YES];
 
+    [vSearchButton setUserInteractionEnabled:NO];
     [self doSearchOnce];
     
     //if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
@@ -101,7 +102,7 @@
     }
     [self.roundani.layer removeAnimationForKey:@"rotationAnimationa"];
     [self.roundani setHidden:YES];
-    
+    [vSearchButton setUserInteractionEnabled:YES];
     if(IPs.count == 1){
         
         gntvAppDelegate * del= [[UIApplication sharedApplication] delegate];
@@ -132,7 +133,6 @@
     //dispatch_async(cq, ^{
     BOOL wifi_status=[self IsWifiNetworkAvialable];
     if(!wifi_status) {
-        [self.vSearchButton setUserInteractionEnabled:YES];
         NSString *ip=[self localWiFiIPAddress];
         if(ip !=nil ){
             NSArray *sections = [ip componentsSeparatedByString:@"."];
@@ -143,7 +143,6 @@
         }
         
     }else{
-        [self.vSearchButton setUserInteractionEnabled:NO];
         NSLog(@"Wifi is not available!");
     }
     //});
@@ -155,6 +154,7 @@
 
 }
 - (IBAction)searchnow:(id)sender {
+    [vSearchButton setUserInteractionEnabled:NO];
     [self doSearchOnce];
 }
 

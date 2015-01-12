@@ -22,23 +22,24 @@
 - (void)initGuide
 {
     CGFloat height=self.view.bounds.size.height;
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-    [scrollView setContentSize:CGSizeMake(1280, 0)];
+    CGFloat width = self.view.bounds.size.width;
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
+    [scrollView setContentSize:CGSizeMake(width*4, height)];
     [scrollView setPagingEnabled:YES];  //视图整页显示
 
-    UIImageView *imageview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, height)];
+    UIImageView *imageview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
     [imageview setImage:[UIImage imageNamed:@"guide_01.jpg"]];
     [scrollView addSubview:imageview];
 
-    UIImageView *imageview1 = [[UIImageView alloc] initWithFrame:CGRectMake(320, 0, 320, height)];
+    UIImageView *imageview1 = [[UIImageView alloc] initWithFrame:CGRectMake(width, 0, width, height)];
     [imageview1 setImage:[UIImage imageNamed:@"guide_02.jpg"]];
     [scrollView addSubview:imageview1];
 
-    UIImageView *imageview2 = [[UIImageView alloc] initWithFrame:CGRectMake(640, 0, 320, height)];
+    UIImageView *imageview2 = [[UIImageView alloc] initWithFrame:CGRectMake(width*2, 0, width, height)];
     [imageview2 setImage:[UIImage imageNamed:@"guide_03.jpg"]];
     [scrollView addSubview:imageview2];
 
-    UIImageView *imageview3 = [[UIImageView alloc] initWithFrame:CGRectMake(960, 0, 320, height)];
+    UIImageView *imageview3 = [[UIImageView alloc] initWithFrame:CGRectMake(width*3, 0, width, height)];
     [imageview3 setImage:[UIImage imageNamed:@"guide_04.jpg"]];
     imageview3.userInteractionEnabled = YES;    //打开imageview3的用户交互;否则下面的button无法响应
     [scrollView addSubview:imageview3];

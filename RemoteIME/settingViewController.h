@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "SplashViewController.h"
+#import "SBJson.h"
+@interface settingViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>{
+    NSDictionary *getUrls;
+}
 
-@interface settingViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
-
-@property (strong, nonatomic) IBOutlet UITableView *buttonTable;
+//@property (strong, nonatomic) IBOutlet UITableView *buttonTable;
 @end
