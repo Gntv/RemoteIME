@@ -175,8 +175,9 @@
         [self.navigationController pushViewController:transview animated:YES];
     }else if(indexPath.row == 1 ){
         //SplashViewController *splash = [[SplashViewController alloc] init];
-        UIViewController *splash = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"splash"];
-        [self presentViewController:splash animated:YES completion:nil];
+        SplashViewController *splash = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"splash"];
+        splash.isFirstTime = NO;
+        [self.navigationController pushViewController:splash animated:YES];
 
     }else{
         [self checkVersion];

@@ -27,7 +27,8 @@
         
         
         
-        UIViewController *mainview = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"splash"];
+        SplashViewController *mainview = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"splash"];
+        mainview.isFirstTime = YES;
         self.window.rootViewController = mainview;
         
         

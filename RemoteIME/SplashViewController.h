@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "gntvViewController.h"
 @interface SplashViewController : UIViewController
-
+@property (nonatomic) Boolean isFirstTime;
 @end

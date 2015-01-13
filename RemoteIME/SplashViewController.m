@@ -13,7 +13,7 @@
 @end
 
 @implementation SplashViewController
-
+@synthesize isFirstTime;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -45,7 +45,12 @@
     [scrollView addSubview:imageview3];
 
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];//在imageview3上加载一个透明的button
-    [button setTitle:@"开始使用" forState:UIControlStateNormal];
+    if (isFirstTime) {
+        [button setTitle:@"开始使用" forState:UIControlStateNormal];
+    }else{
+        [button setTitle:@"继续使用" forState:UIControlStateNormal];
+    }
+    
     [button.titleLabel setFont:[UIFont boldSystemFontOfSize:30]];
     [button setFrame:CGRectMake(46, 371, 230, 37)];
     [button addTarget:self action:@selector(firstpressed) forControlEvents:UIControlEventTouchUpInside];
@@ -91,25 +96,37 @@
 }
 - (void)firstpressed
 {
-    //gntvViewController *transview = [[gntvViewController alloc] init];
-    //gntvViewController *transview = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"qwer"];
-    UINavigationController *transview = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"start"];
-    //[self.navigationController pushViewController:transview animated:YES];
-    //[self presentModalViewController:transview animated:YES];  //点击button跳转到根视图
-    //transview.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-    [self presentViewController:transview animated:YES completion:nil];
-    
-    
-    //UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:transview];
-    //navigationController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    //[self.navigationController presentViewController:navigationController animated:YES completion:nil];
+    if (isFirstTime) {
+        //gntvViewController *transview = [[gntvViewController alloc] init];
+        //gntvViewController *transview = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"qwer"];
+        UINavigationController *transview = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"start"];
+        //[self.navigationController pushViewController:transview animated:YES];
+        //[self presentModalViewController:transview animated:YES];  //点击button跳转到根视图
+        //transview.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+        [self presentViewController:transview animated:YES completion:nil];
+        
+        
+        //UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:transview];
+        //navigationController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+        //[self.navigationController presentViewController:navigationController animated:YES completion:nil];
+
+    }else{
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    if(!isFirstTime){
+        [self.navigationController setNavigationBarHidden:YES];
+    }
+    [super viewWillAppear:animated];
+    
+}
 /*
 #pragma mark - Navigation
 

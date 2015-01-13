@@ -116,7 +116,10 @@
     NSLog(@"最终的识别结果:%@",str);
     //[self.texts setObject:str forKey:str];
     //[self reloadData];
-    self.searchText.text = str;
+    if (str != nil && ![str isEqual: @""]) {
+        self.searchText.text = str;
+    }
+    
     //去掉识别结果最后的标点符号
     //if ([str isEqualToString:@"。"] || [str isEqualToString:@"？"] || [str isEqualToString:@"！"]) {
     //    NSLog(@"末尾标点符号：%@",str);
