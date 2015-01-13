@@ -80,6 +80,15 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBW-yP-Fuv">
+                                        <rect key="frame" x="168" y="177" width="72" height="44"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="247-FU-WQ8" kind="show" id="W7B-TF-zJ3"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -160,7 +169,7 @@
                         <viewControllerLayoutGuide type="bottom" id="GdY-q3-M3a"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="z1u-zk-jiy">
-                        <rect key="frame" x="0.0" y="64" width="600" height="531"/>
+                        <rect key="frame" x="0.0" y="20" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1N-ip-4U1">
@@ -177,7 +186,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4X-MZ-sWJ">
-                                <rect key="frame" x="216" y="286" width="168" height="160"/>
+                                <rect key="frame" x="216" y="264" width="168" height="160"/>
                                 <state key="normal" image="voice_search_microphone.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -248,24 +257,24 @@
                         <viewControllerLayoutGuide type="bottom" id="xte-es-1nK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bju-uR-nU4">
-                        <rect key="frame" x="0.0" y="64" width="600" height="531"/>
+                        <rect key="frame" x="0.0" y="20" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_btn_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="MRf-CQ-qCd">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="531"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RVu-UU-FTy">
-                                <rect key="frame" x="0.0" y="44" width="600" height="6"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lwd-4F-AVo">
-                                <rect key="frame" x="0.0" y="50" width="600" height="47"/>
+                                <rect key="frame" x="0.0" y="49" width="600" height="43"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7J4-qr-Zz9">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="47"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="43"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URh-Lu-7aX">
-                                                <rect key="frame" x="153" y="0.0" width="47" height="47"/>
+                                                <rect key="frame" x="157" y="0.0" width="43" height="43"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="URh-Lu-7aX" secondAttribute="height" multiplier="1:1" id="KN0-MI-pu4"/>
                                                 </constraints>
@@ -292,10 +301,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hzq-jl-gYy">
-                                        <rect key="frame" x="200" y="0.0" width="200" height="47"/>
+                                        <rect key="frame" x="200" y="0.0" width="200" height="43"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBR-g5-97m">
-                                                <rect key="frame" x="77" y="0.0" width="47" height="47"/>
+                                                <rect key="frame" x="79" y="0.0" width="43" height="43"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="wBR-g5-97m" secondAttribute="height" multiplier="1:1" id="fOv-K5-Lpt"/>
                                                 </constraints>
@@ -320,10 +329,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhT-R9-LA9">
-                                        <rect key="frame" x="400" y="0.0" width="200" height="47"/>
+                                        <rect key="frame" x="400" y="0.0" width="200" height="43"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fah-B8-lwy">
-                                                <rect key="frame" x="0.0" y="0.0" width="48" height="47"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="43"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Fah-B8-lwy" secondAttribute="height" multiplier="1:1" id="GEa-xL-pj3"/>
                                                 </constraints>
@@ -382,15 +391,15 @@
                                     </constraint>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="50e-QL-1rQ">
-                                <rect key="frame" x="0.0" y="97" width="600" height="6"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="50e-QL-1rQ">
+                                <rect key="frame" x="0.0" y="92" width="600" height="6"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eTm-U9-x35">
-                                <rect key="frame" x="211" y="98" width="178" height="178"/>
+                                <rect key="frame" x="219" y="98" width="162" height="162"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bi-Lu-jvY">
-                                        <rect key="frame" x="66" y="65" width="47" height="42"/>
+                                        <rect key="frame" x="60" y="65" width="43" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="6bi-Lu-jvY" secondAttribute="height" multiplier="1:1" id="XOS-32-6BR"/>
                                         </constraints>
@@ -405,7 +414,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KkL-KV-lId">
-                                        <rect key="frame" x="131" y="65" width="47" height="42"/>
+                                        <rect key="frame" x="119" y="65" width="43" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="KkL-KV-lId" secondAttribute="height" multiplier="1:1" id="Ynf-yn-ChD"/>
                                         </constraints>
@@ -420,7 +429,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfc-mW-bdx">
-                                        <rect key="frame" x="66" y="130" width="47" height="48"/>
+                                        <rect key="frame" x="60" y="130" width="43" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="nfc-mW-bdx" secondAttribute="height" multiplier="1:1" id="4JA-c6-INs"/>
                                         </constraints>
@@ -435,7 +444,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uz7-Yi-Wd0">
-                                        <rect key="frame" x="66" y="0.0" width="47" height="42"/>
+                                        <rect key="frame" x="60" y="0.0" width="43" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="uz7-Yi-Wd0" secondAttribute="height" multiplier="1:1" id="aIB-LG-2Ff"/>
                                         </constraints>
@@ -450,7 +459,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fU8-u7-Npk">
-                                        <rect key="frame" x="0.0" y="65" width="47" height="42"/>
+                                        <rect key="frame" x="0.0" y="65" width="43" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="fU8-u7-Npk" secondAttribute="height" multiplier="1:1" id="Wse-Xd-qlp"/>
                                         </constraints>
@@ -504,14 +513,14 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9RE-ge-g6p">
-                                <rect key="frame" x="0.0" y="287" width="600" height="238"/>
+                                <rect key="frame" x="0.0" y="265" width="600" height="217"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBg-39-hzY">
-                                        <rect key="frame" x="0.0" y="0.0" width="15" height="238"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="15" height="217"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" restorationIdentifier="123" translatesAutoresizingMaskIntoConstraints="NO" id="QwV-AC-g5F">
-                                        <rect key="frame" x="15" y="0.0" width="131" height="238"/>
+                                        <rect key="frame" x="15" y="0.0" width="131" height="217"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zcB-C9-BhI">
                                                 <rect key="frame" x="0.0" y="0.0" width="131" height="6"/>
@@ -556,7 +565,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lSn-d2-gtx">
-                                                <rect key="frame" x="0.0" y="77" width="131" height="6"/>
+                                                <rect key="frame" x="0.0" y="70" width="131" height="6"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <variation key="widthClass=compact" misplaced="YES">
                                                     <rect key="frame" x="0.0" y="77" width="88" height="7"/>
@@ -600,7 +609,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HKD-At-CaZ">
-                                                <rect key="frame" x="0.0" y="154" width="131" height="6"/>
+                                                <rect key="frame" x="0.0" y="140" width="131" height="6"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                                     <rect key="frame" x="0.0" y="76" width="175" height="4"/>
@@ -724,11 +733,11 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" restorationIdentifier="234" translatesAutoresizingMaskIntoConstraints="NO" id="gYm-oI-cjb">
-                                        <rect key="frame" x="146" y="0.0" width="15" height="238"/>
+                                        <rect key="frame" x="146" y="0.0" width="15" height="217"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXo-FY-Lhm">
-                                        <rect key="frame" x="161" y="0.0" width="132" height="238"/>
+                                        <rect key="frame" x="161" y="0.0" width="132" height="217"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dsj-dw-IiY">
                                                 <rect key="frame" x="0.0" y="0.0" width="132" height="6"/>
@@ -765,7 +774,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FbO-h7-p7O">
-                                                <rect key="frame" x="0.0" y="77" width="132" height="6"/>
+                                                <rect key="frame" x="0.0" y="70" width="132" height="6"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <variation key="widthClass=compact" misplaced="YES">
                                                     <rect key="frame" x="0.0" y="77" width="88" height="7"/>
@@ -805,7 +814,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UG3-1c-RAx">
-                                                <rect key="frame" x="0.0" y="154" width="132" height="6"/>
+                                                <rect key="frame" x="0.0" y="140" width="132" height="6"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                                     <rect key="frame" x="0.0" y="76" width="175" height="4"/>
@@ -893,11 +902,11 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QN0-b0-pWy">
-                                        <rect key="frame" x="293" y="0.0" width="14" height="238"/>
+                                        <rect key="frame" x="293" y="0.0" width="14" height="217"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPh-d7-Y3T">
-                                        <rect key="frame" x="307" y="0.0" width="132" height="238"/>
+                                        <rect key="frame" x="307" y="0.0" width="132" height="217"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O81-M4-fBv">
                                                 <rect key="frame" x="0.0" y="0.0" width="132" height="6"/>
@@ -931,7 +940,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wav-7z-Qg5">
-                                                <rect key="frame" x="0.0" y="77" width="132" height="6"/>
+                                                <rect key="frame" x="0.0" y="70" width="132" height="6"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <variation key="widthClass=compact" misplaced="YES">
                                                     <rect key="frame" x="0.0" y="76" width="88" height="7"/>
@@ -971,7 +980,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZXa-1y-dOk">
-                                                <rect key="frame" x="0.0" y="154" width="132" height="6"/>
+                                                <rect key="frame" x="0.0" y="140" width="132" height="6"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                                     <rect key="frame" x="0.0" y="76" width="175" height="4"/>
@@ -1050,13 +1059,13 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWO-QL-lN2">
-                                        <rect key="frame" x="439" y="0.0" width="15" height="238"/>
+                                        <rect key="frame" x="439" y="0.0" width="15" height="217"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDG-Bd-wEu">
-                                        <rect key="frame" x="454" y="0.0" width="131" height="238"/>
+                                        <rect key="frame" x="454" y="0.0" width="131" height="217"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XxH-mH-jxf">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XxH-mH-jxf">
                                                 <rect key="frame" x="0.0" y="0.0" width="131" height="7"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
@@ -1091,14 +1100,14 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npv-Oz-sVn">
-                                                <rect key="frame" x="0.0" y="77" width="131" height="7"/>
+                                                <rect key="frame" x="0.0" y="70" width="131" height="7"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DGd-lI-Ee4">
-                                                <rect key="frame" x="0.0" y="84" width="131" height="70"/>
+                                                <rect key="frame" x="0.0" y="77" width="131" height="63"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oue-ui-zBV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="131" height="70"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="131" height="63"/>
                                                         <state key="normal" backgroundImage="key_0.png">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -1116,11 +1125,11 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AL9-BY-enp">
-                                                <rect key="frame" x="0.0" y="154" width="131" height="7"/>
+                                                <rect key="frame" x="0.0" y="140" width="131" height="7"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hi7-Ds-nBk">
-                                                <rect key="frame" x="0.0" y="161" width="131" height="70"/>
+                                                <rect key="frame" x="0.0" y="147" width="131" height="70"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKL-DS-2tb">
                                                         <rect key="frame" x="0.0" y="0.0" width="131" height="70"/>
@@ -1192,7 +1201,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMr-bl-VGD">
-                                        <rect key="frame" x="585" y="0.0" width="15" height="238"/>
+                                        <rect key="frame" x="585" y="0.0" width="15" height="217"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
@@ -1275,7 +1284,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hcp-Vx-c2c">
-                                <rect key="frame" x="0.0" y="525" width="600" height="6"/>
+                                <rect key="frame" x="0.0" y="482" width="600" height="5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -1473,7 +1482,7 @@
                         <viewControllerLayoutGuide type="bottom" id="e0b-7I-67l"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9SS-LS-PDv">
-                        <rect key="frame" x="0.0" y="64" width="600" height="531"/>
+                        <rect key="frame" x="0.0" y="20" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

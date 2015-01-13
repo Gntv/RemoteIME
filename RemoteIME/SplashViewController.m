@@ -127,6 +127,14 @@
     [super viewWillAppear:animated];
     
 }
+-(void)viewWillDisappear:(BOOL)animated
+{
+    if(!isFirstTime){
+        [self.navigationController setNavigationBarHidden:NO];
+    }
+    [super viewWillDisappear:animated];
+    
+}
 /*
 #pragma mark - Navigation
 
