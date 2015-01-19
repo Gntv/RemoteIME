@@ -14,6 +14,16 @@
 #import <iflyMSC/IFlySpeechConstant.h>
 #import "AsyncUdpSocket.h"
 #import "gntvAppDelegate.h"
+#import <AVFoundation/AVFoundation.h>
 @interface VOICEVIEWController : UIViewController<IFlySpeechRecognizerDelegate>
-
+{
+    //录音器
+    AVAudioRecorder *recorder;
+    NSDictionary *recorderSettingsDict;
+    //定时器
+    NSTimer *timer;
+    //图片组
+    NSMutableArray *volumImages;
+    double lowPassResults;
+}
 @end

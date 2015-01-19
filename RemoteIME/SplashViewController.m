@@ -24,25 +24,21 @@
     CGFloat height=self.view.bounds.size.height;
     CGFloat width = self.view.bounds.size.width;
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
-    [scrollView setContentSize:CGSizeMake(width*4, height)];
+    [scrollView setContentSize:CGSizeMake(width*3, height)];
     [scrollView setPagingEnabled:YES];  //视图整页显示
 
     UIImageView *imageview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
-    [imageview setImage:[UIImage imageNamed:@"guide_01.jpg"]];
+    [imageview setImage:[UIImage imageNamed:@"guide_01.png"]];
     [scrollView addSubview:imageview];
 
     UIImageView *imageview1 = [[UIImageView alloc] initWithFrame:CGRectMake(width, 0, width, height)];
-    [imageview1 setImage:[UIImage imageNamed:@"guide_02.jpg"]];
+    [imageview1 setImage:[UIImage imageNamed:@"guide_02.png"]];
     [scrollView addSubview:imageview1];
 
     UIImageView *imageview2 = [[UIImageView alloc] initWithFrame:CGRectMake(width*2, 0, width, height)];
-    [imageview2 setImage:[UIImage imageNamed:@"guide_03.jpg"]];
+    [imageview2 setImage:[UIImage imageNamed:@"guide_03.png"]];
+    imageview2.userInteractionEnabled = YES;
     [scrollView addSubview:imageview2];
-
-    UIImageView *imageview3 = [[UIImageView alloc] initWithFrame:CGRectMake(width*3, 0, width, height)];
-    [imageview3 setImage:[UIImage imageNamed:@"guide_04.jpg"]];
-    imageview3.userInteractionEnabled = YES;    //打开imageview3的用户交互;否则下面的button无法响应
-    [scrollView addSubview:imageview3];
 
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];//在imageview3上加载一个透明的button
     if (isFirstTime) {
@@ -58,9 +54,9 @@
     [button sizeToFit];
     
     
-    [imageview3 addSubview:button];
+    [imageview2 addSubview:button];
 
-    [imageview3 addConstraint:[NSLayoutConstraint
+    [imageview2 addConstraint:[NSLayoutConstraint
                               
                               constraintWithItem:button
                               
@@ -68,14 +64,14 @@
                               
                               relatedBy:NSLayoutRelationEqual
                               
-                              toItem:imageview3
+                              toItem:imageview2
                               
                               attribute:NSLayoutAttributeCenterX
                               
                               multiplier:1
                               
                               constant:0]];
-    [imageview3 addConstraint:[NSLayoutConstraint
+    [imageview2 addConstraint:[NSLayoutConstraint
                               
                               constraintWithItem:button
                               
@@ -83,7 +79,7 @@
                               
                               relatedBy:NSLayoutRelationEqual
                               
-                              toItem:imageview3
+                              toItem:imageview2
                               
                               attribute:NSLayoutAttributeBottom
                               

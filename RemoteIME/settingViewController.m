@@ -20,12 +20,15 @@
     //buttonTable.delegate=self;
     //buttonTable.dataSource=self;
     
-    UITableView *tb = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+    UITableView *tb = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     tb.dataSource =self;
     tb.delegate =self;
     tb.backgroundColor = [UIColor clearColor];
     tb.translatesAutoresizingMaskIntoConstraints = NO;
+    tb.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:tb];
+    
+    
     
     [self.view addConstraint:[NSLayoutConstraint
                                
@@ -41,7 +44,7 @@
                                
                                multiplier:1
                                
-                               constant:100]];
+                               constant:10]];
     [self.view addConstraint:[NSLayoutConstraint
                                
                                constraintWithItem:tb
@@ -109,7 +112,10 @@
 {
     return 3;
 }
-
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    cell.backgroundColor = [UIColor whiteColor];
+}
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -141,6 +147,13 @@
     
     //    表视图单元提供的UILabel属性，设置字体大小
     cell.textLabel.font = [UIFont systemFontOfSize:15.0f];
+    
+    
+    UIImageView *lineImage;
+    lineImage= [[UIImageView alloc] initWithFrame:CGRectMake(0, 49, tableView.frame.size.width, 1)];
+    lineImage.image = [UIImage imageNamed:@"unsolidline.png"];
+    [cell.contentView addSubview:lineImage];
+    
     //    tableView.editing=YES;
     /*
      cell.textLabel.backgroundColor = [UIColor clearColor];
@@ -158,6 +171,10 @@
     //UIImage *highLightImage = [UIImage imageNamed:@"1.png"];
     //cell.imageView.highlightedImage = highLightImage;
     return cell;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50.0f;
 }
 /*
 #pragma mark - Navigation

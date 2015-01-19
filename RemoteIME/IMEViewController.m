@@ -28,7 +28,7 @@
 @implementation IMEViewController
 
 @synthesize vCommSoc;
-
+/*
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -36,18 +36,51 @@
         // Custom initialization
     }
     return self;
+}*/
+-(void)setSubView:(UIView *)view {
+        
+        // Get the subviews of the view
+    NSArray *subviews = [view subviews];
+    //[view setTranslatesAutoresizingMaskIntoConstraints:NO];
+        // Return if there are no subviews
+    if ([subviews count] == 0) return; // COUNT CHECK LINE
+        
+    for (UIView *subview in subviews) {
+            
+            // Do what you want to do with the subview
+        //NSLog(@"%@", subview);
+        if ([subviews isKindOfClass:[UIView class]]) {
+            [subview setTranslatesAutoresizingMaskIntoConstraints:NO];
+        }
+        
+            // List the subviews of subview
+        [self setSubView:subview];
+    }
 }
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    //[self setSubView:self.view];
     vCommSoc = [[AsyncUdpSocket alloc] initWithDelegate:self];
     [vCommSoc bindToPort:6000 error:nil];
     [vCommSoc receiveWithTimeout:-1 tag:0];
+    //bool test = self.view.translatesAutoresizingMaskIntoConstraints;
     
     
 	// Do any additional setup after loading the view.
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+    //[self setSubView:self.view];
+    [super viewWillAppear:animated];
 }
 - (void)didReceiveMemoryWarning
 {
