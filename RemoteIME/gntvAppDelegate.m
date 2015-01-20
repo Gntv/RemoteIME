@@ -15,7 +15,7 @@
 {
     // Override point for customization after application launch.
     
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
+    //[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"])

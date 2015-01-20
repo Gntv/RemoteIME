@@ -47,7 +47,7 @@
     }else{
         [button setTitle:@"继续使用" forState:UIControlStateNormal];
     }
-    
+    [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     [button.titleLabel setFont:[UIFont boldSystemFontOfSize:30]];
     [button setFrame:CGRectMake(46, 371, 230, 37)];
     [button addTarget:self action:@selector(firstpressed) forControlEvents:UIControlEventTouchUpInside];
