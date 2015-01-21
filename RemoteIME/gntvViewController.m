@@ -160,7 +160,7 @@
 
 - (void)onUdpSocket:(AsyncUdpSocket *)sock didSendDataWithTag:(long)tag
 {
-	NSLog(@"haha");
+	//NSLog(@"haha");
     
 }
 
