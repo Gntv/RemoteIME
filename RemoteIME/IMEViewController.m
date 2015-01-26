@@ -60,7 +60,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[self setSubView:self.view];
+    [self setSubView:self.view];
     vCommSoc = [[AsyncUdpSocket alloc] initWithDelegate:self];
     [vCommSoc bindToPort:6000 error:nil];
     [vCommSoc receiveWithTimeout:-1 tag:0];
@@ -112,7 +112,7 @@
 
 - (void)onUdpSocket:(AsyncUdpSocket *)sock didSendDataWithTag:(long)tag
 {
-	NSLog(@"haha");
+	//NSLog(@"haha");
 }
 
 - (void)onUdpSocket:(AsyncUdpSocket *)sock didNotSendDataWithTag:(long)tag dueToError:(NSError *)error

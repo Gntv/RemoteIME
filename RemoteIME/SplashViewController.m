@@ -26,6 +26,7 @@
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
     [scrollView setContentSize:CGSizeMake(width*3, height)];
     [scrollView setPagingEnabled:YES];  //视图整页显示
+    [scrollView setBounces:NO];
 
     UIImageView *imageview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
     [imageview setImage:[UIImage imageNamed:@"guide_01.png"]];
@@ -46,7 +47,7 @@
     }else{
         [button setTitle:@"继续使用" forState:UIControlStateNormal];
     }
-    
+    [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     [button.titleLabel setFont:[UIFont boldSystemFontOfSize:30]];
     [button setFrame:CGRectMake(46, 371, 230, 37)];
     [button addTarget:self action:@selector(firstpressed) forControlEvents:UIControlEventTouchUpInside];

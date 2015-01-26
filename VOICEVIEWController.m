@@ -133,8 +133,8 @@
             
         } else
         {
-            int errorCode = CFSwapInt32HostToBig ([error code]);
-            NSLog(@"Error: %@ [%4.4s])" , [error localizedDescription], (char*)&errorCode);
+            //uint32_t errorCode = CFSwapInt32HostToBig ([error code]);
+            //NSLog(@"Error: %@ [%4.4s])" , [error localizedDescription], (char*)&errorCode);
             
         }
     }
@@ -335,7 +335,7 @@
 
 - (void)onUdpSocket:(AsyncUdpSocket *)sock didSendDataWithTag:(long)tag
 {
-	NSLog(@"haha");
+	//NSLog(@"haha");
 }
 
 - (void)onUdpSocket:(AsyncUdpSocket *)sock didNotSendDataWithTag:(long)tag dueToError:(NSError *)error
