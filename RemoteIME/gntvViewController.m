@@ -272,7 +272,7 @@
     //[[cell textLabel] setBackgroundColor:[UIColor clearColor]];
     //[[cell detailTextLabel] setBackgroundColor:[UIColor clearColor]];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"机顶盒%d",indexPath.row+1];
+    cell.textLabel.text = [NSString stringWithFormat:@"机顶盒%d",(int)(indexPath.row+1)];
     //[[IPs allKeys] objectAtIndex:indexPath.row];
     
     //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
