@@ -37,7 +37,9 @@
     [self.roundani setHidden:YES];
 
     [vSearchButton setUserInteractionEnabled:NO];
+    [vIPtable setUserInteractionEnabled:NO];
     [self doSearchOnce];
+    
     
     //if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
         
@@ -103,6 +105,7 @@
     [self.roundani.layer removeAnimationForKey:@"rotationAnimationa"];
     [self.roundani setHidden:YES];
     [vSearchButton setUserInteractionEnabled:YES];
+    [vIPtable setUserInteractionEnabled:YES];
     if(IPs.count == 1){
         
         gntvAppDelegate * del= [[UIApplication sharedApplication] delegate];
@@ -113,6 +116,7 @@
         
         
     }
+    
 }
 -(void)doSearchOnce
 {
@@ -155,6 +159,7 @@
 }
 - (IBAction)searchnow:(id)sender {
     [vSearchButton setUserInteractionEnabled:NO];
+    [vIPtable setUserInteractionEnabled:NO];
     [self doSearchOnce];
 }
 
@@ -267,7 +272,8 @@
     //[[cell textLabel] setBackgroundColor:[UIColor clearColor]];
     //[[cell detailTextLabel] setBackgroundColor:[UIColor clearColor]];
     
-    cell.textLabel.text = [[IPs allKeys] objectAtIndex:indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"机顶盒%d",indexPath.row+1];
+    //[[IPs allKeys] objectAtIndex:indexPath.row];
     
     //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
