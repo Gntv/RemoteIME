@@ -868,8 +868,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hailong Lv (33R7EP3485)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hailong Lv (33R7EP3485)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hailong Lv (649XG642E4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hailong Lv (649XG642E4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)",
 					"$(inherited)",
@@ -879,7 +879,7 @@
 				INFOPLIST_FILE = "RemoteIME/RemoteIME-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4524939b-b34b-4893-a921-99b3ce18643c";
+				PROVISIONING_PROFILE = "a29c95c6-7772-49a0-b210-61850d8a48a2";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -890,8 +890,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hailong Lv (33R7EP3485)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hailong Lv (33R7EP3485)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hailong Lv (649XG642E4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hailong Lv (649XG642E4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)",
 					"$(inherited)",
@@ -901,7 +901,7 @@
 				INFOPLIST_FILE = "RemoteIME/RemoteIME-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4524939b-b34b-4893-a921-99b3ce18643c";
+				PROVISIONING_PROFILE = "a29c95c6-7772-49a0-b210-61850d8a48a2";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
