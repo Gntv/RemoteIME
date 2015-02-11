@@ -160,6 +160,8 @@
 - (IBAction)searchnow:(id)sender {
     [vSearchButton setUserInteractionEnabled:NO];
     [vIPtable setUserInteractionEnabled:NO];
+    [IPs removeAllObjects];
+    [vIPtable reloadData];
     [self doSearchOnce];
 }
 
